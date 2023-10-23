@@ -7,12 +7,12 @@ use std::time::Instant;
 
 fn main() -> Result<(), Box<dyn Error>> {
     let start_time = Instant::now();
-    // 1. Read the cars.csv file
+
     let file = File::open("nba.csv")?;
 
     // Create the CSV reader with the specified delimiter
     let mut rdr = ReaderBuilder::new()
-        .delimiter(b';') // Set the delimiter to ;
+        .delimiter(b',') // Set the delimiter to ;
         .has_headers(true)
         .from_reader(file);
 

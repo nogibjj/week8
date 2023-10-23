@@ -6,7 +6,7 @@ from main import compute_statistics
 
 def test_compute_statistics():
     start_time = time.time()
-    df = pd.read_csv("cars.csv", sep=";")
+    df = pd.read_csv("nba.csv", sep=",")
     stats = compute_statistics(df, "Weight")
 
     assert "mean" in stats, "Mean not computed"
